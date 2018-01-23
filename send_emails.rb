@@ -40,7 +40,7 @@ def send_email_to_line(ws)
 	
 	(1..ws.num_rows).each do |row|
 		email = gmail.compose do
-			puts to ws[row, 2]
+			to ws[row, 2]
 			subject "Présentation"
 			body "Bonjour,
 Je m'appelle Sébastien, je suis élève à une formation de code gratuite, ouverte à tous, sans restriction géographique, ni restriction de niveau. La formation s'appelle The Hacking Project (http://thehackingproject.org/). Nous apprenons l'informatique via la méthode du peer-learning : nous faisons des projets concrets qui nous sont assignés tous les jours, sur lesquel nous planchons en petites équipes autonomes. Le projet du jour est d'envoyer des emails à nos élus locaux pour qu'ils nous aident à faire de The Hacking Project un nouveau format d'éducation gratuite.
